@@ -1,0 +1,10 @@
+black==23.11.0
+colorama==0.4.6
+docx2txt==0.8
+flake8==6.1.0
+google-api-core==2.15.0
+google-api-python-client==2.110.0
+isort==5.13.0
+pre-commit==3.6.0
+tensorflow==2.15.0
+transformers==4.35.2

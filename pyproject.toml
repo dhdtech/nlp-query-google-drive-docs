@@ -1,0 +1,6 @@
+[tool.isort]
+profile = "black"
+
+[tool.black]
+exclude = "venv"
+max-line-length = 88
