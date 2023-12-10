@@ -27,9 +27,27 @@ The project structure is organized as follows:
 
 To use this project, follow these steps:
 
-### 1. Install Dependencies
+### 0. 🚨🚨🚨 External requirement
+
+In order to run this without setting up all the googl cloud console stuff, you need to have a `hudson-dias-google-drive-crd.json` file in the `config` folder. This file is not commited to the repo for security reasons, but you can get it from me on the following channels:
+
+- Whatsapp - +55 61 999 378 984
+- Email - diogo@dhdtech.io
+- iMessage - +55 61 999 378 984 or diogo.hudson@gmail.com
+
+Also, provide me your gmail account where the `.doc` files are stored, so I can add you as a test user of the google cloud project.
+
+### 1. Prepare your local environment
 
 Install the required dependencies, including `transformers`, `pytorch`, and Google OAuth libraries, using the following command:
+
+This project has a Make file to help you with the development process, so you can run the following command to install all the dependencies:
+
+```bash
+make configure_devel
+```
+
+If you prefer to install the dependencies manually, you can run the following command (don't forget to create/activate your virtual environment)
 
 ```bash
 pip install -r requirements.txt
@@ -37,7 +55,13 @@ pip install -r requirements.txt
 
 ### 2. Run the Code
 
-Run the code by executing main.py and passing the desired value for `threshold` and `folder_name` parameters.
+1. Activate your virtual environment. If it was created by `configure_devel` command, you can run the following command:
+
+```bash
+source venv/bin/activate
+```
+
+2. Run the code by executing main.py and passing the desired value for `threshold` and `folder_name` parameters.
 
 - `threshold` is the minimum cosine similarity score between the query and the document for it to be considered a match, if not specified, the code will use a default value of 0.5.
 - `folder_name` is the name of the folder in Google Drive to search for documents, if not specified, the code will search the entire drive.
@@ -45,6 +69,8 @@ Run the code by executing main.py and passing the desired value for `threshold` 
 ```bash
 python main.py --threshold 0.5 --folder_name "folder_with_documents"
 ```
+
+If the first time you run the code, your default browser will open to authenticate with Google Drive. After that, code will continue to run and you will see the results in the terminal.
 
 ### 3. Developing Here 🚀
 

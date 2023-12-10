@@ -39,6 +39,7 @@ class TextProcessor:
                 fileId=document_id,
                 mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document",  # noqa E501
             )
+            breakpoint()
             exported_file = export_request.execute()
 
             bytes_io = BytesIO(exported_file)
@@ -46,10 +47,7 @@ class TextProcessor:
 
             return text
         except Exception as e:
-            logging.error(
-                f"Error extracting text from document {document_id}: {str(e)}"
-            )
-            return None
+            raise e
 
     def get_document_name(self, document_id: str) -> str:
         """
