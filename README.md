@@ -103,6 +103,8 @@ CI/CD Features:
 
 - [ ] Add missing unit tests
 - [ ] Adds caching on Github Actions to speed up the CI/CD process
+- [ ] Create/Update Coverage badge on README.md after each CI/CD run
+- [ ] Add minimum code coverage threshold to the CI/CD process. (As of now, it is only checking if the tests are passing)
 
 ## References
 
