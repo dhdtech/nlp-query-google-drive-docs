@@ -109,7 +109,3 @@ CI/CD Features:
 - [Google Drive API Documentation](https://developers.google.com/drive)
 - [Transformers Library Documentation](https://huggingface.co/transformers/)
 - [OAuth 2.0 Authentication](https://developers.google.com/identity/protocols/oauth2)
-
-```
-
-```
