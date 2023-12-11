@@ -1,22 +1,13 @@
 on: push
 name: on push
 jobs:
-  UtilsUnitTests:
-    name: Unit tests for hudson_utils
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: GitHub Action for pytest
-        uses: cclauss/GitHub-Action-for-pytest@master
-        with:
-          args: pytest  --cov=hudson_utils --cov
-  LintAndStyle:
+  LyntStyleAndUnitTests:
     name: Lint and style check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.9
       - name: Install dependencies
@@ -25,3 +16,6 @@ jobs:
       - name: Lint with flake8
         run: |
           make lint_and_format
+      - name: Unit tests
+        run: |
+          make run_tests
