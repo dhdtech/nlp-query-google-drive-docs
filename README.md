@@ -94,9 +94,15 @@ The result will be something like this and they are self-explanatory:
 
 ### 4. Next Steps 📈
 
-- [ ] Add missing unit tests
+Code Features:
+
 - [ ] Handle other documents other than `doc` files (e.g. `pdf`, `txt`, etc.)
 - [ ] Add an online NLP service to process the queries (e.g. Google Cloud Natural Language API or even OpenAI's GPT-3)
+
+CI/CD Features:
+
+- [ ] Add missing unit tests
+- [ ] Adds caching on Github Actions to speed up the CI/CD process
 
 ## References
 
