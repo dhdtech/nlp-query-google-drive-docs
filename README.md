@@ -1,3 +1,4 @@
+[![on push](https://github.com/dhdtech/nlp-query-google-drive-docs/actions/workflows/ci.yml/badge.svg)](https://github.com/dhdtech/nlp-query-google-drive-docs/actions/workflows/ci.yml)
 # NLP Querying of Google Drive Documents
 
 This Python project showcases Natural Language Processing (NLP) capabilities by enabling users to query Google Drive documents within a specified folder using the `transformers` library. The code emphasizes good code quality, adherence to SOLID principles, and a well-structured codebase. Additionally, it demonstrates how to authenticate with Google Drive using OAuth 2.0 credentials dynamically.
