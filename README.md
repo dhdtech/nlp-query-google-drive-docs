@@ -11,6 +11,11 @@ The primary motivation behind this project is to illustrate the power of NLP in 
 - NLP-based querying of Google Drive documents.
 - OAuth 2.0 authentication for secure access.
 - Demonstrates good code quality and coding principles.
+- Makefile commands to improve Developer Experience (DX).
+- CI/CD pipeline using Github Actions, running on every push to the main branch.
+- Code coverage report using `pytest-cov` and `codecov` to ensure code quality.
+- Code style enforcement using `flake8`, `isort`, and `black` to ensure code quality.
+- pre-commit hooks to ensure code quality and security.
 
 ## Project Structure
 
