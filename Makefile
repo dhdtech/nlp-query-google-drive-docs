@@ -25,7 +25,9 @@ lint_and_format: ## Runs flake8, isort and black against the codebase
 	black --config pyproject.toml .
 	flake8 .
 
-
+run_tests: ## Runs the unit tests
+	python -m pytest --cov=hudson_utils
+	
 configure_devel: validate_local_env clean_devel ## Cleans up the environment and installs the development dependencies
 	@bash -c "python3 -m venv venv && source venv/bin/activate && pip install --upgrade pip setuptools wheel && pip install -r requirements.txt && pre-commit install"
 	

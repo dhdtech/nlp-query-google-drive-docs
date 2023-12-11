@@ -92,6 +92,12 @@ The result will be something like this and they are self-explanatory:
 #####################################################################################################################
 ```
 
+### 4. Next Steps 📈
+
+- [ ] Add missing unit tests
+- [ ] Handle other documents other than `doc` files (e.g. `pdf`, `txt`, etc.)
+- [ ] Add an online NLP service to process the queries (e.g. Google Cloud Natural Language API or even OpenAI's GPT-3)
+
 ## References
 
 - [Google Drive API Documentation](https://developers.google.com/drive)
