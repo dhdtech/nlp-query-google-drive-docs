@@ -14,7 +14,7 @@ In order to provide a quick taste of the result, this is a recording showing the
 
 In this example, we are reading two Word documents with information about CERRADO and AMAZON biomes and one PDF book about the allegorical representation of elephants in literature. Then, making some queries that will retrieve the answer from the relevant documents and also the cosine similarity score between the query and the document.
 
-
+https://github.com/dhdtech/nlp-query-google-drive-docs/assets/49169467/4380f0e0-e72d-4de8-aa7f-1d259bb93027
 
 ### Key Features
 
@@ -26,9 +26,6 @@ In this example, we are reading two Word documents with information about CERRAD
 - Code coverage report using `pytest-cov` and `codecov` to ensure code quality.
 - Code style enforcement using `flake8`, `isort`, and `black` to ensure code quality.
 - pre-commit hooks to ensure code quality and security.
-
-
-https://github.com/dhdtech/nlp-query-google-drive-docs/assets/49169467/4380f0e0-e72d-4de8-aa7f-1d259bb93027
 
 
 ## Project Structure
