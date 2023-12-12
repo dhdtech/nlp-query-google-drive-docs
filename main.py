@@ -37,6 +37,10 @@ if __name__ == "__main__":
         "What is the average temperature in the Cerrado?",
         "How much Earth's rainwater is stored in the Amazon rainforest?",
         "Which percentage of modern medicines are derived from the Amazon rainforest?",
+        "What does the elephant suggest the bookseller is, in the last part of the text?",  # noqa E501
+        "Who records the strength and skills of elephants?",
+        "What comparison is made between man and the spaniel in the text?",
+        "What is the underlying message or critique about human nature as compared to animals in the text?",  # noqa E501
     ]
 
     # Authenticate with Google Drive using OAuth 2.0 credentials
@@ -55,7 +59,6 @@ if __name__ == "__main__":
         # Initialize text processor with the correct service object
         text_processor = TextProcessor(
             drive_service=gds.drive_service,
-            folder_name=folder_name,
             threshold=threshold,
         )
 

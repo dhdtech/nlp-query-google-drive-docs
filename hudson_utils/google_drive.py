@@ -3,6 +3,11 @@ import os
 
 from googleapiclient.discovery import build
 
+ALLOWED_MIME_TYPES = [
+    "application/vnd.google-apps.document",
+    "application/pdf",
+]
+
 
 class GoogleDriveService:
     def __init__(self, credentials):
@@ -23,8 +28,8 @@ class GoogleDriveService:
             folder_name (str): Name of the folder to retrieve documents from.
 
         Returns:
-            list: List of document metadata dictionaries with 'id', 'full_path', and
-                'title'.
+            list: List of document metadata dictionaries with 'id', 'full_path', 'title'
+            and 'mime_type'.
         """
         folder_id = self.get_folder_id_by_name(folder_name)
         if not folder_id:
@@ -32,6 +37,33 @@ class GoogleDriveService:
             return []
 
         documents = self.list_files_in_folder(folder_id, folder_name)
+
+        # check mime type of each document
+        for document in documents:
+            document_id = document["id"]
+            document_name = document["title"]
+
+            try:
+                document_metadata = (
+                    self.drive_service.files().get(fileId=document_id).execute()
+                )
+                document_mime_type = document_metadata.get("mimeType")
+
+                if document_mime_type not in ALLOWED_MIME_TYPES:
+                    logging.warning(
+                        f"Document '{document_name}' has mime type {document_mime_type}"
+                        " and will be skipped."
+                    )
+                    documents.remove(document)
+                else:
+                    document["mime_type"] = document_mime_type
+            except Exception as e:
+                logging.error(
+                    f"Error retrieving document metadata for ID {document_id}: "
+                    f"{str(e)}"
+                )
+                documents.remove(document)
+
         return documents
 
     def get_folder_id_by_name(self, folder_name: str) -> str:
