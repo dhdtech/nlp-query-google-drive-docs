@@ -73,7 +73,7 @@ source venv/bin/activate
 - `folder_name` is the name of the folder in Google Drive to search for documents, if not specified, the code will search the entire drive.
 
 ```bash
-python main.py --threshold 0.5 --folder_name "folder_with_documents"
+python main.py --threshold=0.5 --folder_name=folder_with_documents
 ```
 
 If the first time you run the code, your default browser will open to authenticate with Google Drive. After that, code will continue to run and you will see the results in the terminal.
